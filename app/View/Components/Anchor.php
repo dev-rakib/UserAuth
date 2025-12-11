@@ -1,0 +1,29 @@
+<?php
+
+namespace App\View\Components;
+
+use Closure;
+use Illuminate\Contracts\View\View;
+use Illuminate\View\Component;
+
+class Anchor extends Component
+{
+    /**
+     * Create a new component instance.
+     */
+    public $class;
+    public $name;
+    public function __construct(string $class)
+    {
+        $this->class = $class;
+        $this->name = $name;
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     */
+    public function render(): View|Closure|string
+    {
+        return view('components.elements.anchor');
+    }
+}
